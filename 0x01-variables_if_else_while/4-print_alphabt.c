@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * block of code
- * print all alphabeth except q and e 
+ * print all alphabeth except q and e
  * Return: 0
  */
 int main(void)
