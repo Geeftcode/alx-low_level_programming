@@ -5,7 +5,8 @@
  * putchar
  * Return: 0,
  */
-int putchar(char c)
+
+int putchar(char)
 {
 	putchar("_putchar\n");
 	return(0);
