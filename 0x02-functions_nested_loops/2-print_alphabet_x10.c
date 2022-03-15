@@ -5,6 +5,7 @@
  * a program to print out lowercase alphabet
  * in ten places
  */
+
 void print_alphabet_x10(void)
 {
 	int count, alphabet;
