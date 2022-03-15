@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <main.h>
 /**
  * main -entry point
  * program to print 
@@ -6,8 +6,15 @@
  * Return: 0,
  */
 
-int putchar(char)
+int main(void)
 {
-	putchar("_putchar\n");
+	char *ch = "_putchar;
+
+	while(*ch)
+	{
+		_putchar(*ch);
+		ch++;
+	}
+	_putchar('\n');
 	return(0);
 }
