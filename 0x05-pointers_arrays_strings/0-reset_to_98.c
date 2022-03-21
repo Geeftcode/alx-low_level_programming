@@ -6,15 +6,8 @@
  * as parameter and updates the value it points to to 98.
  * Return: 0 always
  */
-
-int main(void)
+void reset_to_98(int *n)
 {
-	int n;
-
-	n = 402;
-	putchar("n=%d\n", n);
-	reset_to_98(&n);
-	n = 98;
-	putchar("n=%d\n", n);
-	return (0);
+	*n = 98;
 }
+
