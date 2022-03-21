@@ -6,7 +6,7 @@
  */
 void _puts(char *str)
 {
-	str[];
+	str[] = "I do not fear computers. I fear the lack of them - Isaac Asimov";
 	_puts("%s\n", str[]);
 	return (0);
 }
