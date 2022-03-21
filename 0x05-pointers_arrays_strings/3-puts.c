@@ -6,7 +6,11 @@
  */
 void _puts(char *str)
 {
-	str[70] = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	_putchar("%s\n", str[70]);
-	return (str[70]);
+	int i;
+	
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
