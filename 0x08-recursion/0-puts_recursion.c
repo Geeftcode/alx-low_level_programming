@@ -2,9 +2,9 @@
 /**
  *  _puts_recursion - prints a string, followed by a new line.
  *  @s: string
- *  Return: return 0
+ *  Return: no return
  */
-void _puts_recursion(char *s);
+void _puts_recursion(char *s)
 {
 	if (*s != '\0')
 	{
