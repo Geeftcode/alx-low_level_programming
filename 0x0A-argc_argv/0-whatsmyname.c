@@ -7,9 +7,9 @@
  * @argv: a Vector that stores the cli arguments.
  * Return: Always 0 (Success)
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
-	void(argc);
+	(void)argc;
 	printf("%s\n", *argv);
 	return (0);
 }
