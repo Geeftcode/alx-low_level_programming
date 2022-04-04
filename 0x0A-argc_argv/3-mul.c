@@ -12,11 +12,11 @@ int main(int argc, char **argv)
 	int product;
 
 	if (argc != 3)
-		puts("error");
+		puts("Error");
 	else
 	{
 		product = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", product);
 	}
-	return (1);
+	return (0);
 }
