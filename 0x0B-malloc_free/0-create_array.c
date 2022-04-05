@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * main - Entry point
+ * create_array - function declaration
  * Description - a function that creates an array of chars,
  * and initializes it with a specific char.
- * @*create_array: function declaration
  * @size: size of array
  * @c: character array
  * Return: pointer to array or NULL
