@@ -2,48 +2,54 @@
 #include <stdlib.h>
 
 /**
- * string_nconcat - concatenates two strings.
- * @s1: first string.
- * @s2: second string.
- * @n: amount of bytes.
+ * _realloc - Reallocates a memory block using malloc and free.
+ * @ptr: A pointer to the memory previously allocated.
+ * @old_size: The size in bytes of the allocated space for ptr.
+ * @new_size: The size in bytes for the new memory block.
  *
- * Return: pointer to the allocated memory.
- * if malloc fails, status value is equal to 98.
+ * Return: If new_size == old_size - ptr.
+ *         If new_size == 0 and ptr is not NULL - NULL.
+ *         Otherwise - a pointer to the reallocated memory block.
  */
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	char *sout;
-	unsigned int ls1, ls2, lsout, i;
+	void *mem;
+	char *ptr_copy, *filler;
+	unsigned int index;
 
-	if (s1 == NULL)
-		s1 = "";
+	if (new_size == old_size)
+		return (ptr);
 
-	if (s2 == NULL)
-		s2 = "";
+	if (ptr == NULL)
+	{
+		mem = malloc(new_size);
 
-	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
-		;
+		if (mem == NULL)
+			return (NULL);
 
-	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
-		;
+		return (mem);
+	}
 
-	if (n > ls2)
-		n = ls2;
-
-	lsout = ls1 + n;
-
-	sout = malloc(lsout + 1);
-
-	if (sout == NULL)
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
 		return (NULL);
+	}
 
-	for (i = 0; i < lsout; i++)
-		if (i < ls1)
-			sout[i] = s1[i];
-		else
-			sout[i] = s2[i - ls1];
+	ptr_copy = ptr;
+	mem = malloc(sizeof(*ptr_copy) * new_size);
 
-	sout[i] = '\0';
+	if (mem == NULL)
+	{
+		free(ptr);
+		return (NULL);
+	}
 
-	return (sout);
+	filler = mem;
+
+	for (index = 0; index < old_size && index < new_size; index++)
+		filler[index] = *ptr_copy++;
+
+	free(ptr);
+	return (mem);
 }
