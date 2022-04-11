@@ -1,17 +1,6 @@
-#ifndef ABS(x)
-#define ABS(x) ((x) - ((2) * (x)))
+#ifndef _FUNCTION_LIKE_MACRO_
+#define _FUNCTION_LIKE_MACRO_
 
-int  main ()
-{
-	int num;
+#define ABDS(x) ((x) < (0) ? ((x) -((2) * (x))
 
-#if (num > 0)
-	{
-		_putchar(num);
-	}
-#else
-	{
-	_putchar(ABS(x));
-	}
-}
 #endif
