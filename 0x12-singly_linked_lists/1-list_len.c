@@ -1,19 +1,19 @@
+#include <stddef.h>
 #include "lists.h"
+
 /**
- * list_len - returns then number of elements in a list.
- * @h: singly linked list.
- * Return: number of elements in the list.
+ * list_len - returns to len of a linked list
+ * @h: pointer to the first node
+ *
+ * Return: number of elements
  */
 
 size_t list_len(const list_t *h)
 {
-	size_t nelem;
+	size_t len = 0;
 
-	nelem = 0;
-	while (h != NULL)
-	{
+	for (len = 0; h; len++)
 		h = h->next;
-		nelem++;
-	}
-	return (nelem);
+
+	return (len);
 }
