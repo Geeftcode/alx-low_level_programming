@@ -8,17 +8,17 @@ int main()
 
     printf("input value of x:\n");
     scanf("%d", &x);
-    printf("input value of x:\n");
+    printf("input value of y:\n");
     scanf("%d", &y);
-    printf("value of x before: %d", &x);
-    printf("value of y before: %d", &y);
+    printf("value of x before: %d\n", x);
+    printf("value of y before: %d\n", y);
     
     temp = x;
     x = y;
     y = temp;
 
-    printf("value of x after: %d", &x);
-    printf("value of y after: %d", &y);
+    printf("value of x after: %d\n", x);
+    printf("value of y after: %d\n", y);
     return 0;
 
 }
